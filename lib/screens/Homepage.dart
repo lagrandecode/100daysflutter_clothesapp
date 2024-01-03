@@ -11,9 +11,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [CustomAppBar(),SearchBar()],
+          children: [CustomAppBar(),SearchBarActivity()],
         ),
       ),
     );
   }
 }
+
+////

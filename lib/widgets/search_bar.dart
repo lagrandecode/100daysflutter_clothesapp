@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatelessWidget {
-  const SearchBar({Key? key}) : super(key: key);
+class SearchBarActivity extends StatelessWidget {
+  const SearchBarActivity({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(left: 5.0),
       child: Row(
         children: [
           Flexible(
@@ -30,9 +31,10 @@ class SearchBar extends StatelessWidget {
           Container(
             width: 50,
             decoration: BoxDecoration(
-              color: Colors.red,
+              color: Colors.yellow,
               borderRadius: BorderRadius.circular(10)
             ),
+            child: Image.asset("assets/images/map-pin.png"),
           ),
         ],
       ),
