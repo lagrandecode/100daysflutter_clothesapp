@@ -1,3 +1,4 @@
+import 'package:clothesapp/widgets/carousel_slide.dart';
 import 'package:clothesapp/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [CustomAppBar(),SearchBarActivity()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [CustomAppBar(),SearchBarActivity(),CarouselSlidePage()],
         ),
       ),
     );
