@@ -8,10 +8,33 @@ class CarouselSlidePage extends StatefulWidget {
 }
 
 class _CarouselSlidePageState extends State<CarouselSlidePage> {
+  final taskList = ["T-shirt", "Shoes", "Sneakers"];
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("carousel page"),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+            children: taskList
+                .map((e) => Container(
+                      padding: EdgeInsets.all(10),
+                      margin: EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xFff5C15C),
+                      ),
+                      child: Text(
+                        e,
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                    ))
+                .toList()),
+        Container(
+          margin: EdgeInsets.only(left: 15.0),
+          child: Text("hhhhh"),)
+      ],
     );
   }
 }
