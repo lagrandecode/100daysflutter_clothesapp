@@ -33,7 +33,7 @@ class _CarouselSlidePageState extends State<CarouselSlidePage> {
                 .toList()),
         Container(
           margin: EdgeInsets.only(left: 15.0),
-          child: Text("hhhhh"),)
+          child: Text("hhhhhhhelodd"),)
       ],
     );
   }
