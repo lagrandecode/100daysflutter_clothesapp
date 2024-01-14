@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class CarouselSlidePage extends StatefulWidget {
   const CarouselSlidePage({Key? key}) : super(key: key);
 
@@ -9,6 +10,7 @@ class CarouselSlidePage extends StatefulWidget {
 
 class _CarouselSlidePageState extends State<CarouselSlidePage> {
   final taskList = ["T-shirt", "Shoes", "Sneakers"];
+
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +33,7 @@ class _CarouselSlidePageState extends State<CarouselSlidePage> {
                       ),
                     ))
                 .toList()),
-        Container(
-          margin: EdgeInsets.only(left: 15.0),
-          child: Text("hhhhh"),),
+
       ],
     );
   }
