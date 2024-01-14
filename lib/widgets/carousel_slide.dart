@@ -33,7 +33,6 @@ class _CarouselSlidePageState extends State<CarouselSlidePage> {
                       ),
                     ))
                 .toList()),
-
       ],
     );
   }

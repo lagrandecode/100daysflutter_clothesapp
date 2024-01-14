@@ -14,7 +14,12 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [CustomAppBar(),SearchBarActivity(),CarouselSlidePage(),CarouselView()],
+          children: [
+            CustomAppBar(),
+            SearchBarActivity(),
+            CarouselSlidePage(),
+            CarouselView(),
+          ],
         ),
       ),
     );

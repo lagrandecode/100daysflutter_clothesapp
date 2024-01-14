@@ -1,3 +1,4 @@
+import 'package:clothesapp/widgets/clothes_iitems.dart';
 import 'package:flutter/material.dart';
 
 import '../models/carousel_model.dart';
@@ -9,18 +10,19 @@ class CarouselView extends StatefulWidget {
 
 class _CarouselViewState extends State<CarouselView> {
   List<CarouselModel> carouselItems = CarouselModel.generateCarousel();
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 245,
       child: ListView.separated(
-        scrollDirection: Axis.vertical,
-          itemBuilder: (BuildContext context, _)=>ListTile(
-            title: Text(carouselItems[_].name?? ""),
-            subtitle: Text(carouselItems[_].subtitle?? ""),
-          ),
-          separatorBuilder: (BuildContext context, _)=>Divider(),
-          itemCount: carouselItems.length,),
+          itemBuilder: (BuildContext context, _) =>
+              ClothesItems(carouselItems[_]),
+          separatorBuilder: (BuildContext context, _) => SizedBox(
+                width: 10.0,
+              ),
+          scrollDirection: Axis.horizontal,
+          itemCount: carouselItems.length),
     );
   }
 }
