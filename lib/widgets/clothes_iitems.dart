@@ -80,4 +80,3 @@ class _ClothesItemsState extends State<ClothesItems> {
         ));
   }
 }
-///
