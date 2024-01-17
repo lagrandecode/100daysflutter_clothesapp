@@ -1,4 +1,5 @@
 import 'package:clothesapp/models/carousel_model.dart';
+import 'package:clothesapp/screens/display_clothes.dart';
 import 'package:flutter/material.dart';
 
 class ClothesItems extends StatefulWidget {
@@ -12,11 +13,13 @@ class ClothesItems extends StatefulWidget {
 
 class _ClothesItemsState extends State<ClothesItems> {
   bool isFavorite = false;
-  void IconColorChange(){
+
+  void IconColorChange() {
     setState(() {
-      isFavorite=!isFavorite;
+      isFavorite = !isFavorite;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,17 +33,23 @@ class _ClothesItemsState extends State<ClothesItems> {
             children: [
               Stack(
                 children: [
-                  Container(
-                    height: 170,
-                    width: 200,
-                    decoration: BoxDecoration(
-                        color: Colors.yellow.withOpacity(0.8),
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage(
-                              widget.clothes.image ?? "",
-                            ),
-                            fit: BoxFit.fitHeight)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => DisplayClothes()));
+                    },
+                    child: Container(
+                      height: 170,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          color: Colors.yellow.withOpacity(0.8),
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                widget.clothes.image ?? "",
+                              ),
+                              fit: BoxFit.fitHeight)),
+                    ),
                   ),
                   Positioned(
                     right: 10,
@@ -49,15 +58,21 @@ class _ClothesItemsState extends State<ClothesItems> {
                       onTap: IconColorChange,
                       child: Container(
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Icon(
+                          Icons.favorite,
+                          color: isFavorite ? Colors.red : Colors.grey,
                         ),
-                        child: Icon(Icons.favorite,color: isFavorite? Colors.red: Colors.grey,),
                       ),
                     ),
                   ),
                 ],
               ),
-              Text(widget.clothes.name,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red),),
+              Text(
+                widget.clothes.name,
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+              ),
               Text(widget.clothes.subtitle),
               Text('\N${widget.clothes.price.toString()}'),
             ],
@@ -65,3 +80,4 @@ class _ClothesItemsState extends State<ClothesItems> {
         ));
   }
 }
+///
