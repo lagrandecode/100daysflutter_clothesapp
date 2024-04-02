@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
             SearchBarActivity(),
             CarouselSlidePage(),
             CarouselView(),
+
           ],
         ),
       ),
