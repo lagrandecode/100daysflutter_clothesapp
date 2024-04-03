@@ -1,6 +1,7 @@
 import 'package:clothesapp/widgets/carousel_slide.dart';
 import 'package:clothesapp/widgets/carousel_view.dart';
 import 'package:clothesapp/widgets/search_bar.dart';
+import 'package:clothesapp/widgets/shoes.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_app_bar.dart';
@@ -19,6 +20,7 @@ class HomePage extends StatelessWidget {
             SearchBarActivity(),
             CarouselSlidePage(),
             CarouselView(),
+            ShowsDisplay(),
 
           ],
         ),
